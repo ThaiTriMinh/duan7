@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #4e73df, #1f1c5d);
+  color: white;
+}
+
+header .hero-content {
+  margin-top: 40px;
+}
+
+header .heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+header .subheading {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #f1f1f1;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Main Sections */
+.info-section, .languages-section, .skills-section, .tools-section {
+  margin: 60px 20px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-section:hover, .languages-section:hover, .skills-section:hover, .tools-section:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+p, ul {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Languages & Tools Cards */
+.languages, .tools {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.language-card, .tool-card {
+  background: #2d3436;
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  width: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.language-card:hover, .tool-card:hover {
+  transform: translateY(-10px);
+  background-color: #00b894;
+}
+
+.language-card:active, .tool-card:active {
+  transform: translateY(2px);
+}
+
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6c5ce7;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: #00b894;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header .heading {
+    font-size: 2.5rem;
+  }
+
+  header .subheading {
+    font-size: 1.2rem;
+  }
+
+  .language-card, .tool-card {
+    width: 120px;
+  }
+
+  .scroll-top {
+    font-size: 18px;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
